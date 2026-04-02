@@ -10,7 +10,7 @@ if ($id <= 0) {
 
 $conn = getConnection();
 
-// Cargar tarea actual
+// Cargar tarea actual de forma rapida
 $stmt = $conn->prepare("SELECT * FROM tasks WHERE id = ?");
 $stmt->bind_param('i', $id);
 $stmt->execute();
@@ -25,7 +25,7 @@ if (!$task) {
 
 $errors       = [];
 $titleInvalid = false;
-$data         = $task; // Pre-llenar con datos actuales
+$data         = $task;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data['title']       = sanitize($_POST['title'] ?? '');

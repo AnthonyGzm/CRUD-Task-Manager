@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       <?php endif; ?>
 
+       // aplicar clase is-invalid
       <form method="POST">
         <div class="mb-3">
           <label class="form-label fw-semibold">Título <span class="text-danger">*</span></label>
