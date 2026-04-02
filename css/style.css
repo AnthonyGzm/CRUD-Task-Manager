@@ -1,0 +1,22 @@
+/* ── Task Manager — estilos ── */
+
+.navbar-brand { letter-spacing: .3px; }
+
+/* Tarjetas de estadísticas */
+.stat-card {
+  background: #fff;
+  border-left: 4px solid #fff;
+  border-radius: .5rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.07);
+}
+.stat-card.total { border-color: #ffffff; }
+.stat-card .number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+/* Tabla */
+.table > :not(caption) > * > * { padding: .7rem .85rem; }
