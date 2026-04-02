@@ -7,7 +7,6 @@ $result = $conn->query("SELECT * FROM tasks ORDER BY created_at DESC");
 $tasks  = $result->fetch_all(MYSQLI_ASSOC);
 $conn->close();
 
-// Contadores para las tarjetas de estadísticas
 $total    = count($tasks);
 $pending  = count(array_filter($tasks, fn($t) => $t['status'] === 'pending'));
 $progress = count(array_filter($tasks, fn($t) => $t['status'] === 'in-progress'));
