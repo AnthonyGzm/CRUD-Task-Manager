@@ -1,0 +1,6 @@
+# Archivos que NO deben subirse a GitHub
+.env
+*.log
+.DS_Store
+Thumbs.db
+config/local.php
