@@ -6,7 +6,7 @@ $id = intval($_GET['id'] ?? 0);
 if ($id > 0) {
     $conn = getConnection();
 
-    // Verificar que la tarea existe antes de eliminar
+    // Verificar que la tarea existe antes de eliminar(Working)
     $check = $conn->prepare("SELECT id FROM tasks WHERE id = ?");
     $check->bind_param('i', $id);
     $check->execute();
